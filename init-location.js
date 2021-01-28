@@ -7,7 +7,11 @@ export default [
     {
         Name: 'Devotion Tattoo Studio',
         Latitude: 30.40494, 
-        Longitude: -97.87303
+        Longitude: -97.87303,
+        North:30.40494,
+        South:30.40494,
+        East:-97.87303,
+        West:-97.87303
     }
 
 ];
