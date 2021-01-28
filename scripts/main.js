@@ -1,9 +1,5 @@
 import locationsArray from '../init-locations.js';
 
-// helper functions....................
-
-
-// event handlers......................
 
 
 let locationElement = document.getElementById("location");
@@ -29,8 +25,6 @@ async function getLocation() {
     });
 }
 
-//the locationHandler() function checksout the current location and compares it with the 
-//init-locations.
 
 async function locationHandler() {
     let locText = await getLocation();
