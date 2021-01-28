@@ -1,4 +1,3 @@
-// import default object with a local camelCase name
 import locationsArray from '../init-locations.js';
 
 const inside = (device, bounds) => {
