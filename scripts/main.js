@@ -1,9 +1,5 @@
 import locationsArray from '../init-locations.js';
 
-// helper functions....................
-
-
-// event handlers......................
 
 
 let locationElement = document.getElementById("location");
@@ -29,8 +25,6 @@ async function getLocation() {
     });
 }
 
-//the locationHandler() function checksout the current location and compares it with the 
-//init-locations.
 
 async function locationHandler() {
     let locText = await getLocation();
@@ -42,6 +36,8 @@ async function locationHandler() {
     locationsArray.forEach(function (value) {
         if (isInside(value.Latitude, value.Longitude)) {
             document.getElementById("locationAnswer").innerHTML = value.Name;
+            let utterance = new SpeechSynthesisUtterance("You reached the location. Welcome to " + value.Name);
+            speechSynthesis.speak(utterance);
             error = false;
         }
     });
@@ -52,6 +48,8 @@ async function locationHandler() {
         document.getElementById("error-message").innerHTML = "You're not in the radius range.";
     } else {
         document.getElementById("error-message").innerHTML = "";
+        let utterance = new SpeechSynthesisUtterance(innerHTML);
+         speechSynthesis.speak(utterance);
     }
 }
 
